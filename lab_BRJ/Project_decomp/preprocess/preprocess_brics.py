@@ -34,7 +34,7 @@ def convert_smiles_to_mol_objects(smiles_list):
             print(f"Failed to create Mol object from: {cleaned_smiles}, error: {e}")
     return mol_objects
 
-#===============================================================================================================
+#==============================================================================================================
 def one_hot_encode_all(frag):
     frag_list = list(frag)
     value_to_index = {value: idx for idx, value in enumerate(frag_list)}
@@ -50,7 +50,7 @@ def one_hot_encode_all(frag):
     # 각 값에 대해 원핫 인코딩 수행
     one_hot_encodings = {value: one_hot_encode(value, value_to_index, len(frag_list)) for value in frag_list}
     return one_hot_encodings
-#===============================================================================================================
+#==============================================================================================================
 
 
 def brics_decompose(mol):
